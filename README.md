@@ -17,6 +17,8 @@ Jumper: MIDI-IN_path
 # Setting up
 VSCode [download](https://code.visualstudio.com/) and install.  
 Mbed CLI [download](https://github.com/ARMmbed/mbed-cli-windows-installer/releases) and install.  
+TortoiseGit [download](https://tortoisegit.org/) and install. (option)  
+
 $ git clone https://github.com/bcc6/joyMIDI-SDK.git  
 $ cd joyMIDI-SDK  
 $ mbed compile -m NUMAKER_PFM_M453 -t GCC_ARM --profile .\MyProfile\my_profile_nano.json --stats-depth=2  
