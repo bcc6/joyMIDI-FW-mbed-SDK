@@ -15,16 +15,14 @@ Jumper: MIDI-IN_path
 
 
 # Setting up
-Mbed CLI [download](https://github.com/ARMmbed/mbed-cli-windows-installer/releases) and install.
-
-$ git clone https://github.com/bcc6/joyMIDI-SDK.git
-
-$ cd joyMIDI-SDK
-
-$ mbed compile -m NUMAKER_PFM_M453 -t GCC_ARM --profile .\MyProfile\my_profile_nano.json --stats-depth=2
+VSCode [download](https://code.visualstudio.com/) and install.  
+Mbed CLI [download](https://github.com/ARMmbed/mbed-cli-windows-installer/releases) and install.  
+$ git clone https://github.com/bcc6/joyMIDI-SDK.git  
+$ cd joyMIDI-SDK  
+$ mbed compile -m NUMAKER_PFM_M453 -t GCC_ARM --profile .\MyProfile\my_profile_nano.json --stats-depth=2  
 
 
-# nanolibc
+# newlib-nano (nanolibc)
 Small code size but not thread safe.
 
 API   | Available
