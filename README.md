@@ -37,5 +37,12 @@ Event | V
 
 # Programming
  - ISP
+ 1. Launch \joyMIDI-SDK\MyISP\NuvoISP.exe
+ 2. Load APROM file from \joyMIDI-SDK\BUILD\NUMAKER_PFM_M453\GCC_ARM-MY_PROFILE_NANO\joyMIDI-SDK.bin
+ 3. Check the box `APROM`.
+ 4. Device is power-off, Keep pushing the joystick's button, plug USB to power-on device then goto ISP mode.
+ 5. Press `Connect`, press `Start`.
+ 6. After finish, release the joystick's button.
+ 
  - ICP
 
