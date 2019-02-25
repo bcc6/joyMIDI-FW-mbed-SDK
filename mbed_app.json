@@ -1,0 +1,25 @@
+{
+    "config": {
+        "welcome_string": {
+            "help": "This string printed on the terminal at start-up",
+            "value": "\"~ hELL. wORLD ~\""
+        },
+        "main-stack-size": {
+            "value": 2048
+        },
+        "thread-stack-size": {
+            "value": 1024
+        },
+        "run_mode": {
+            "help": "0:Normal(MIDI-IN-Jumper: Short), 1:Debug(Open), 2:Test(Open)",
+            "value": 0
+        }
+    },
+    "target_overrides": {
+        "*": {
+            "platform.stdio-flush-at-exit": false,
+            "events.shared-dispatch-from-application": true
+        }
+    },
+    "macros": []
+}
