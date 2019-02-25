@@ -1,18 +1,39 @@
-# mbed-os-joyMIDI
-joyMIDI SDK base on mbed-os
+# joyMIDI-SDK
+joyMIDI-SDK base on mbed-os-5.10.0
 
 
-# run_mode in mbed_app.json (MBED_CONF_APP_RUN_MODE)
+# Run mode
+Configure `run_mode` in `mbed_app.json`, this will generate a macro `MBED_CONF_APP_RUN_MODE`
 
-            | MIDI-IN_serial  |  Debug_serial  |  Test_functions |
-            ------------------------------------------------------
-  0: Normal |       V         |       X        |        X        |
-  1: Debug  |       X         |       V        |        X        |
-  2: Test   |       X         |       V        |        V        |
+Run_mode  | MIDI-IN_serial  |  Debug_serial  |  Test_functions |      Jumper
+----------|-----------------|----------------|-----------------|----------------------
+0: Normal |       V         |       X        |        X        |       Short
+1: Debug  |       X         |       V        |        X        |       Open
+2: Test   |       X         |       V        |        V        |       Open
+
+Jumper: MIDI-IN_path
 
 
-            | MIDI-IN_path    |
-            -------------------
-  0: Normal |       Short     |
-  1: Debug  |       Open      |
-  2: Test   |       Open      |
+# Setting up
+VSCode [download](https://code.visualstudio.com/) and install.  
+Mbed CLI [download](https://github.com/ARMmbed/mbed-cli-windows-installer/releases) and install.  
+TortoiseGit [download](https://tortoisegit.org/) and install. (option)  
+
+$ git clone https://github.com/bcc6/joyMIDI-SDK.git  
+$ cd joyMIDI-SDK  
+$ mbed compile -m NUMAKER_PFM_M453 -t GCC_ARM --profile .\MyProfile\my_profile_nano.json --stats-depth=2  
+
+
+# newlib-nano (nanolibc)
+Small code size but not thread safe.
+
+API   | Available
+------|-----------
+RTOS  | X
+Event | V
+
+
+# Programming
+ - ISP
+ - ICP
+
